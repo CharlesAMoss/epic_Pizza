@@ -5,11 +5,11 @@
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-        <title></title>
+        <title>All I See Is Pizza </title>
 
         <meta content="" name="description">
         <meta content="width=device-width" name="viewport">
-
+        <link href="favicon.ico" rel="icon">
         <link href="css/main.css" rel="stylesheet">
 
     </head>
@@ -28,39 +28,48 @@
 
                 <article class="main__article">
 
-                    <h2 class="main__title"></h2>
+                    <h2 class="main__title">Order Your Pizza Here!</h2>
 
-                    <form class="main__form" id="new-contact">
+                    <form class="main__form" id="order-pizza">
                         <div class="form__group">
-                            <label class="form__label" for="new-first-name">First name</label>
-                            <input class="form__input" id="new-first-name" type="text">
+                            <label class="form__label" for="new-size">What Size:</label><br/>
+                            <div class="radio__group">
+                                <input class="form__radio" name="radioName" type="radio" value="Slice"/>
+                                Slice
+                                <br/>
+                                <input class="form__radio" name="radioName" type="radio" value="Pie"/>
+                                Pie
+                                <br/>
+                                <input class="form__radio" name="radioName" type="radio" value="Sicilian"/>
+                                Sicilian
+                                <br/>
+                            </div>
 
-                            <label class="form__label" for="new-last-name">Last name</label>
-                            <input class="form__input" id="new-last-name" type="text">
-
-                            <!-- <label class="form__label" for="new-address">Address</label>
-                            <input class="form__input" id="new-address" type="text"> -->
+                            <label class="form__label" for="new-quantity">How Many:</label>
+                            <input class="form__input" min="1" name="pizza-quantity" step="1" type="number" value="1">
 
                         </div>
 
-                        <div "form__group" id="new-addresses">
-                            <div class="new-address">
+                        <div "form__group" id="new-topping">
+                            <div class="topping">
 
-                                <label class="form__label" for="new-street">Street</label>
-                                <input class="form__input new-street" type="text">
+                                <label class="form__label" for="toppings-list">Topping</label>
 
-                                <label class="form__label" for="new-city">City</label>
-                                <input class="form__input new-city" type="text">
-
-                                <label class="form__label" for="new-state">State</label>
-                                <input class="form__input new-state" type="text">
+                                    <select  class="form__select" name="toppings-list">
+                                        <option >Cheese</option>
+                                        <option value="Pepperoni">Pepperoni</option>
+                                        <option value="Mushroom">Mushrooms</option>
+                                        <option value="Olives">Olives</option>
+                                        <option value="Pepperoncini">Pepperoncini</option>
+                                        <option value="Sausage">Sausage</option>
+                                    </select>
 
                             </div>
+
                         </div>
+                        <span class="form__btn" id="add-address">Add Another Topping</span>
+                        <button class="form__btn" type="submit">Order</button>
 
-                        <span class="form__btn" id="add-address">Another address</span>
-
-                        <button class="form__btn" type="submit">Add</button>
                     </form>
 
                     <div class="main__result" id="result">
@@ -85,9 +94,7 @@
                                 <span class="last-name"></span>
                             </p>
                             <p>Addresses:
-                                <ul id="addresses">
-
-                                </ul>
+                                <ul id="addresses"></ul>
                             </p>
                         </div>
                     </div>
@@ -96,7 +103,8 @@
 
             </section>
 
-        </div><!-- end of wrapper -->
+        </div>
+<!-- end of wrapper -->
 
         <footer class="site__footer">
 

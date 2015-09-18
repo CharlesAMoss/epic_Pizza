@@ -88,9 +88,6 @@ describe('Pizza', function() {
         expect(total).to.equal(price);
     });
 
-
-
-
 });
 
 describe('Topping', function( ) {
