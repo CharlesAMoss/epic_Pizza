@@ -13,6 +13,6 @@ describe('Pizza', function() {
         var price = 2.50;
         var total = testPizza.total();
 
-        expect(total).to.equal(cost);
+        expect(total).to.equal(price);
     });
 });
