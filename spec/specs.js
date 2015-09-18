@@ -8,9 +8,17 @@ describe('Pizza', function() {
         expect(testPizza.pizzaTopping).to.eql([]);
     });
 
-    it("calculates the cost for one small size no toppings", function() {
+    it("calculates the price for one small size no toppings", function() {
         var testPizza = new Pizza("Slice", 1);
         var price = 2.50;
+        var total = testPizza.total();
+
+        expect(total).to.equal(price);
+    });
+
+    it("calculates the price for one large size no toppings", function() {
+        var testPizza = new Pizza("Pie", 1);
+        var price = 16.00;
         var total = testPizza.total();
 
         expect(total).to.equal(price);
