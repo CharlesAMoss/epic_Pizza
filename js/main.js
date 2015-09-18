@@ -6,8 +6,8 @@ function Pizza(pizzaSize, pizzaQuantity, pizzaTopping) {
 
 Pizza.prototype.total = function() {
 
-
-
-
-    return 2.50; 
+    if ( this.pizzaSize === "Pie" ) {
+        return 16.00;
+    }
+        return 2.50;
 };
