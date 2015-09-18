@@ -48,5 +48,13 @@ describe('Pizza', function() {
         expect(total).to.equal(price);
     });
 
+    it("calculates the price for 1 large size with 1 topping", function() {
+        var testPizza = new Pizza("Pie", 1);
+        var price = (16.00 + 2.00);
+        var total = testPizza.topping();
+
+        expect(total).to.equal(price);
+    });
+
 
 });
