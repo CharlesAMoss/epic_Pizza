@@ -69,9 +69,21 @@ describe('Pizza', function() {
         var testTopping = new Topping("pepperoni");
         testPizza.pizzaTopping.push(testTopping);
 
-
         var price = (16.00 + 2.00) * 2;
         var total = testPizza.quantity();
+
+        expect(total).to.equal(price);
+    });
+
+    it("calculates the price for 1 giant size 1 topping, 1 large size with 1 topping", function() {
+        var testPizza = new Pizza("Sicilian", 1);
+        var testPizza2 = new Pizza("Pie", 1);
+        var testTopping = new Topping("pepperoni");
+        testPizza.pizzaTopping.push(testTopping);
+        testPizza2.pizzaTopping.push(testTopping);
+
+        var price = (16.00 + 2.00) + (20.00 + 2.50);
+        var total = testPizza.quantity() + testPizza2.quantity();
 
         expect(total).to.equal(price);
     });
