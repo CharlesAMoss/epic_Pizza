@@ -58,3 +58,15 @@ describe('Pizza', function() {
 
 
 });
+
+describe('Topping', function( ) {
+    it("creates a new Topping with the given specifications", function() {
+
+    var testPizza = new Pizza("Pie", 1);
+    var testTopping = new Topping("pepperoni");
+    testPizza.pizzaTopping.push(testTopping);
+
+    expect(testPizza.pizzaTopping).to.have.length(1);
+    });
+
+});

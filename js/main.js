@@ -1,4 +1,4 @@
-function Pizza(pizzaSize, pizzaQuantity, pizzaTopping) {
+function Pizza(pizzaSize, pizzaQuantity) {
     this.pizzaSize = pizzaSize;
     this.pizzaQuantity = pizzaQuantity;
     this.pizzaTopping = [];
@@ -16,4 +16,14 @@ Pizza.prototype.size = function() {
 
 Pizza.prototype.quantity = function() {
     return this.size(this.pizzaSize) * this.pizzaQuantity;
+};
+
+function Topping(pizzaTopping) {
+    this.pizzaTopping = pizzaTopping;
+}
+
+
+
+Pizza.prototype.topping = function() {
+
 };
