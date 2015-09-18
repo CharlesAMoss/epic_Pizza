@@ -14,10 +14,6 @@ Pizza.prototype.size = function() {
     }
 };
 
-Pizza.prototype.quantity = function() {
-    return this.size(this.pizzaSize) * this.pizzaQuantity;
-};
-
 Pizza.prototype.topping = function() {
     if (this.pizzaSize === "Sicilian") {
         return this.pizzaTopping.length * 2.50;
@@ -26,6 +22,10 @@ Pizza.prototype.topping = function() {
     } else {
         return this.pizzaTopping.length * 0.50;
     }
+};
+
+Pizza.prototype.quantity = function() {
+    return (this.size(this.pizzaSize) + this.topping(this.pizzaSize)) * this.pizzaQuantity;
 };
 
 function Topping(pizzaTopping) {

@@ -71,7 +71,7 @@ describe('Pizza', function() {
 
 
         var price = (16.00 + 2.00) * 2;
-        var total = testPizza.size() + testPizza.topping();
+        var total = testPizza.quantity();
 
         expect(total).to.equal(price);
     });
