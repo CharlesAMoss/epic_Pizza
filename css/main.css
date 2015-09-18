@@ -56,6 +56,18 @@ aside {
     padding: 20px;
     color: #2d3438;
 }
+.footer__content {
+    padding: 20px;
+    color: #2d3438;
+}
+.footer__content p a {
+    text-decoration: none;
+    color: #2d3438;
+}
+.footer__content p a:hover {
+    text-decoration: underline;
+    color: #0b0d0e;
+}
 
 /* typography =============== */
 
