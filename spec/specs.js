@@ -32,14 +32,6 @@ describe('Pizza', function() {
         expect(total).to.equal(price);
     });
 
-    it("calculates the price for one giant size no toppings", function() {
-        var testPizza = new Pizza("Sicilian", 1);
-        var price = 20.00;
-        var total = testPizza.size();
-
-        expect(total).to.equal(price);
-    });
-
     it("calculates the price for two large size no toppings", function() {
         var testPizza = new Pizza("Pie", 2);
         var price = (16.00 * 2);
@@ -58,6 +50,33 @@ describe('Pizza', function() {
 
         expect(total).to.equal(price);
     });
+
+    it("calculates the price for 1 large size with 2 toppings", function() {
+        var testPizza = new Pizza("Pie", 1);
+        var testTopping = new Topping("pepperoni");
+        var testTopping2 = new Topping("mushroom");
+        testPizza.pizzaTopping.push(testTopping);
+        testPizza.pizzaTopping.push(testTopping2);
+
+        var price = (16.00 + 4.00);
+        var total = testPizza.size() + testPizza.topping();
+
+        expect(total).to.equal(price);
+    });
+
+    it("calculates the price for 2 large size with 1 topping", function() {
+        var testPizza = new Pizza("Pie", 2);
+        var testTopping = new Topping("pepperoni");
+        testPizza.pizzaTopping.push(testTopping);
+
+
+        var price = (16.00 + 2.00) * 2;
+        var total = testPizza.size() + testPizza.topping();
+
+        expect(total).to.equal(price);
+    });
+
+
 
 
 });
