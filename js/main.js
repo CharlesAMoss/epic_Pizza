@@ -25,9 +25,53 @@ Pizza.prototype.topping = function() {
 };
 
 Pizza.prototype.quantity = function() {
-    return (this.size(this.pizzaSize) + this.topping(this.pizzaSize)) * this.pizzaQuantity;
+    return ((this.size(this.pizzaSize) + this.topping(this.pizzaSize)) * this.pizzaQuantity).toFixed(2);
 };
 
 function Topping(pizzaTopping) {
     this.pizzaTopping = pizzaTopping;
 }
+
+$(document).ready(function() {
+    $("#add-topping").click(function() {
+        $(".topping").clone().last().appendTo("#new-topping");
+        //resetTopping();
+    });
+
+    $("form#order-pizza").submit(function(event) {
+        event.preventDefault();
+
+        var size = $("input[name=radioSize]:checked").val();
+        var quantity = $("input[name=pizza-quantity]").val();
+
+        var newPizza = new Pizza(size, quantity);
+
+        $(".topping").each(function() {
+            var pickTopping = $(this).find("#toppings-list option:selected").val();
+
+            var newTopping = new Topping(pickTopping);
+            newPizza.pizzaTopping.push(newTopping);
+        });
+
+
+        $("ul#order").append("<li><span class='pizza'>Pizza " +  newPizza.pizzaSize + "</span></li>");
+
+        $(".pizza").last().click(function() {
+            $("#show-pizza").fadeIn("slow");
+            $("#show-pizza h2").text(newPizza.pizzaSize);
+            $(".quantity").text(newPizza.pizzaQuantity);
+            $("ul#toppings").text("");
+            $("#cost").text("$ " + newPizza.quantity());
+
+            console.log(newPizza.pizzaTopping);
+
+            for ( var topping of newPizza.pizzaTopping ) {
+                $("ul#toppings").append("<li>" + topping + "</li>");
+            }
+        });
+
+        $(".topping").not(':first').remove();
+
+        //resetFields();
+    });
+});

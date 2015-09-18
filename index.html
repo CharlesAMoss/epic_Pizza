@@ -34,13 +34,13 @@
                         <div class="form__group">
                             <label class="form__label" for="new-size">What Size:</label><br/>
                             <div class="radio__group">
-                                <input class="form__radio" name="radioName" type="radio" value="Slice"/>
+                                <input class="form__radio" name="radioSize" type="radio" value="Slice"/>
                                 Slice
                                 <br/>
-                                <input class="form__radio" name="radioName" type="radio" value="Pie"/>
+                                <input class="form__radio" name="radioSize" type="radio" value="Pie"/>
                                 Pie
                                 <br/>
-                                <input class="form__radio" name="radioName" type="radio" value="Sicilian"/>
+                                <input class="form__radio" name="radioSize" type="radio" value="Sicilian"/>
                                 Sicilian
                                 <br/>
                             </div>
@@ -55,8 +55,8 @@
 
                                 <label class="form__label" for="toppings-list">Topping</label>
 
-                                    <select  class="form__select" name="toppings-list">
-                                        <option >Cheese</option>
+                                    <select id="toppings-list" class="form__select" name="toppings-list">
+                                        <option disabled selected value="" ></option>
                                         <option value="Pepperoni">Pepperoni</option>
                                         <option value="Mushroom">Mushrooms</option>
                                         <option value="Olives">Olives</option>
@@ -67,7 +67,7 @@
                             </div>
 
                         </div>
-                        <span class="form__btn" id="add-address">Add Another Topping</span>
+                        <span class="form__btn" id="add-topping">Add Another Topping</span>
                         <button class="form__btn" type="submit">Order</button>
 
                     </form>
@@ -81,21 +81,22 @@
                 <aside class="">
 
                     <h2>Your Order:</h2>
-                    <ul id="pies"></ul>
+                    <ul id="order"></ul>
 
                     <div>
-                        <div id="show-contact">
+                        <div id="show-pizza">
                             <h2></h2>
 
-                            <p>First name:
-                                <span class="first-name"></span>
+                            <p>Quantity:
+                                <span class="quantity"></span>
                             </p>
-                            <p>Last name:
-                                <span class="last-name"></span>
+
+                            <p>Topping:
+                                <ul id="toppings"></ul>
                             </p>
-                            <p>Addresses:
-                                <ul id="addresses"></ul>
-                            </p>
+
+                            <h3 id="cost"></h3>
+
                         </div>
                     </div>
 

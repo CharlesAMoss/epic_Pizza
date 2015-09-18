@@ -103,7 +103,7 @@ aside {
 
 /* ================== contacts */
 
-#show-contact {
+#show-pizza {
   display: none;
 }
 
@@ -117,12 +117,12 @@ aside h2 {
     font-weight: 200;
 }
 
-.contact {
+.pizza {
   cursor: pointer;
   color: #0088cc;
 }
 
-.contact:hover {
+.pizza:hover {
   text-decoration: underline;
 }
 
