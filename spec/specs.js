@@ -23,4 +23,12 @@ describe('Pizza', function() {
 
         expect(total).to.equal(price);
     });
+
+    it("calculates the price for one giant size no toppings", function() {
+        var testPizza = new Pizza("Sicilian", 1);
+        var price = 20.00;
+        var total = testPizza.total();
+
+        expect(total).to.equal(price);
+    });
 });
