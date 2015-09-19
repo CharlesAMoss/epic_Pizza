@@ -49,14 +49,16 @@ aside {
     float: right;
 }
 .site__footer {
-    background: #7e8e97;
-    border-top: 1px solid #2d3438;
+
+    background: url('../image/gingham.jpg');
+    border-top: 1px solid #f7aeae;
 }
 .footer__content {
     padding: 20px;
     color: #2d3438;
 }
 .footer__content {
+    font-weight: 600;
     padding: 20px;
     color: #2d3438;
 }
@@ -168,7 +170,7 @@ aside h2 {
 }
 
 .form__select {
-    margin: .5em 0 4em 0;
+    margin: .5em 0 1em 0;
     padding: 15px;
     width: 90%;
     height: 60px;
@@ -177,9 +179,6 @@ aside h2 {
     border: 1px solid #d6cac2;
 }
 
-.form__select option {
-
-}
 
 .form__btn {
     background: #f5f2f0;
@@ -188,6 +187,7 @@ aside h2 {
     color: #b7a294;
     padding: 20px;
     font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* ================== picture gallery */

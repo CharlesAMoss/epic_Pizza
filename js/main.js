@@ -48,9 +48,11 @@ $(document).ready(function() {
 
         $(".topping").each(function() {
             var pickTopping = $(this).find("#toppings-list option:selected").val();
+            if ( pickTopping !== "Cheese" ){
+                var newTopping = new Topping(pickTopping);
+                newPizza.pizzaTopping.push(newTopping);
+            }
 
-            var newTopping = new Topping(pickTopping);
-            newPizza.pizzaTopping.push(newTopping);
         });
 
 
@@ -63,7 +65,7 @@ $(document).ready(function() {
             $("ul#toppings").text("");
             $("#cost").text("$ " + newPizza.quantity());
 
-            console.log(newPizza.pizzaTopping);
+
 
             for ( var topping of newPizza.pizzaTopping ) {
                 $("ul#toppings").append("<li>" + topping.pizzaTopping + "</li>");
