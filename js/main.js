@@ -66,7 +66,7 @@ $(document).ready(function() {
             console.log(newPizza.pizzaTopping);
 
             for ( var topping of newPizza.pizzaTopping ) {
-                $("ul#toppings").append("<li>" + topping + "</li>");
+                $("ul#toppings").append("<li>" + topping.pizzaTopping + "</li>");
             }
         });
 
