@@ -35,7 +35,7 @@ function Topping(pizzaTopping) {
 $(document).ready(function() {
     $("#add-topping").click(function() {
         $(".topping").clone().last().appendTo("#new-topping");
-        //resetTopping();
+
     });
 
     $("form#order-pizza").submit(function(event) {
@@ -52,7 +52,7 @@ $(document).ready(function() {
                 var newTopping = new Topping(pickTopping);
                 newPizza.pizzaTopping.push(newTopping);
             }
-
+        $('#order-pizza')[0].reset();
         });
 
 
@@ -64,12 +64,10 @@ $(document).ready(function() {
             $(".quantity").text(newPizza.pizzaQuantity);
             $("ul#toppings").text("");
             $("#cost").text("$ " + newPizza.quantity());
-
-
-
             for ( var topping of newPizza.pizzaTopping ) {
                 $("ul#toppings").append("<li>" + topping.pizzaTopping + "</li>");
             }
+
         });
 
         $(".topping").not(':first').remove();
