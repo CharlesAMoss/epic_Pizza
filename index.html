@@ -1,127 +1,112 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-        <title>All I See Is Pizza </title>
+    <title>All I See Is Pizza</title>
 
-        <meta content="" name="description">
-        <meta content="width=device-width" name="viewport">
-        <link href="favicon.ico" rel="icon">
-        <link href="css/main.css" rel="stylesheet">
+    <meta content="" name="description">
+    <meta content="width=device-width" name="viewport">
+    <link href="favicon.ico" rel="icon">
+    <link href="css/main.css" rel="stylesheet">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div class="wrapper">
+    <div class="wrapper">
 
-            <header>
+        <header>
 
-                <h1 class="site__title">Famous Formaggio's Pizza</h1>
+            <h1 class="site__title">Famous Formaggio's Pizza</h1>
 
-            </header>
+        </header>
 
-            <section class="main group">
+        <section class="main group">
 
-                <article class="main__article">
+            <article class="main__article">
 
-                    <h2 class="main__title">Order Your Pizza Here!</h2>
+                <h2 class="main__title">Order Your Pizza Here!</h2>
 
-                    <form class="main__form" id="order-pizza">
-                        <div class="form__group">
-                            <label class="form__label" for="new-size">What Size:</label><br/>
-                            <div class="radio__group">
-                                <input class="form__radio" name="radioSize" type="radio" value="Slice"/>
-                                Slice
-                                <br/>
-                                <input class="form__radio" name="radioSize" type="radio" value="Pie"/>
-                                Pie
-                                <br/>
-                                <input class="form__radio" name="radioSize" type="radio" value="Sicilian"/>
-                                Sicilian
-                                <br/>
-                            </div>
-
-                            <label class="form__label" for="new-quantity">How Many:</label>
-                            <input class="form__input" min="1" name="pizza-quantity" step="1" type="number" value="1">
-
+                <form class="main__form" id="order-pizza">
+                    <div class="form__group">
+                        <label class="form__label" for="new-size">What Size:</label>
+                        <br/>
+                        <div class="radio__group">
+                            <input class="form__radio" name="radioSize" type="radio" value="Slice" /> Slice
+                            <br/>
+                            <input class="form__radio" name="radioSize" type="radio" value="Pie" /> Pie
+                            <br/>
+                            <input class="form__radio" name="radioSize" type="radio" value="Sicilian" /> Sicilian
+                            <br/>
                         </div>
 
-                        <div class="form__group" id="new-topping">
-                            <div class="topping">
+                        <label class="form__label" for="new-quantity">How Many:</label>
+                        <input class="form__input" min="1" name="pizza-quantity" step="1" type="number" value="1">
 
-                                <label class="form__label" for="toppings-list">Topping</label>
-
-                                    <select id="toppings-list" class="form__select" name="toppings-list">
-                                        <option disabled selected value="Cheese" >Cheese</option>
-                                        <option value="Pepperoni">Pepperoni</option>
-                                        <option value="Mushroom">Mushrooms</option>
-                                        <option value="Olives">Olives</option>
-                                        <option value="Pepperoncini">Pepperoncini</option>
-                                        <option value="Sausage">Sausage</option>
-                                    </select>
-
-                            </div>
-
-                        </div>
-                        <span class="form__btn" id="add-topping">Add Another Topping</span>
-                        <button class="form__btn" type="submit">Order</button>
-
-                    </form>
-
-                    <div class="main__result" id="result">
-                        <p></p>
                     </div>
 
-                </article>
+                    <div class="form__group" id="new-topping">
+                        <div class="topping">
 
-                <aside class="">
+                            <label class="form__label" for="toppings-list">Topping:</label>
 
-                    <h2>Your Order:</h2>
-                    <ul id="order"></ul>
-
-                    <div>
-                        <div id="show-pizza">
-                            <h2></h2>
-
-                            <p>Quantity:
-                                <span class="quantity"></span>
-                            </p>
-
-                            <p>
-                                <ul id="toppings"></ul>
-                            </p>
-
-                            <h3 id="cost"></h3>
+                            <select id="toppings-list" class="form__select" name="toppings-list">
+                                <option disabled selected value="Cheese">Cheese</option>
+                                <option value="Pepperoni">Pepperoni</option>
+                                <option value="Mushroom">Mushrooms</option>
+                                <option value="Olives">Olives</option>
+                                <option value="Pepperoncini">Pepperoncini</option>
+                                <option value="Sausage">Sausage</option>
+                            </select>
 
                         </div>
                     </div>
+                    <span class="form__btn" id="add-topping">Add Another Topping</span>
+                    <button class="form__btn" type="submit">Order</button>
 
-                </aside>
+                </form>
+            </article>
 
-            </section>
+            <aside class="">
+
+                <h2>Your Order:</h2>
+                <ul id="order"></ul>
+
+                <div id="show-pizza">
+                    <h2></h2>
+
+                    <p>Quantity:
+                        <span class="quantity"></span>
+                    </p>
+
+                    <p>
+                        <ul id="toppings"></ul>
+                    </p>
+
+                    <h3 id="cost"></h3>
+
+                </div>
+            </aside>
+        </section>
+
+    </div><!-- end of wrapper -->
+
+    <footer class="site__footer">
+        <div class="footer__content">
+
+            <p>Copyright 2015 - fork me on
+                <a href="https://github.com/CharlesAMoss/epic_Pizza">Github</a>
+            </p>
 
         </div>
-<!-- end of wrapper -->
+    </footer>
 
-        <footer class="site__footer">
-
-            <div class="footer__content">
-
-                <p>Copyright 2015 - fork me on
-                    <a href="https://github.com/CharlesAMoss/epic_Pizza">Github</a>
-                </p>
-
-            </div>
-
-        </footer>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script type="text/javascript"></script>
-    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript"></script>
+</body>
 
 </html>

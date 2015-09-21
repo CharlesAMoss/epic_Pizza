@@ -1,20 +1,18 @@
 # _Pizza_
-## _website that allows a user to make a pizza order, 9/19/2015_
+## _website that allows a user to calculate a pizza order, 9/19/2015_
 ### By Charles Moss
 ## Description
-_User chooses quantities, toppings and size of their pizza order and is show the final cost._
+_User chooses quantities, toppings and size of their pizza order and is shown the final cost._
 
 ## Demo
+
+_View a demo on [Codepen](http://codepen.io/CharlesAMoss/full/LpZbyp)._
 
 ## Setup
 _Clone and open index.html in your browser. To view the Mocha/Chai tests open spec-runner.html in your browser._  
 
 ## Technologies Used
 _This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._
-
-## To Do
-
-## Aside
 
 ### Legal
 Copyright (c) 2015 Charles A Moss
