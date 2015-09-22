@@ -82,13 +82,13 @@ describe('Pizza', function() {
         testPizza.pizzaTopping.push(testTopping);
         testPizza2.pizzaTopping.push(testTopping);
 
-        var price = (16.00 + 2.00 + 20.00 + 2.50).toFixed(2);
+        var price = (16.00 + 2.00 + 20.00 + 2.50);
         var total = testPizza.quantity();
         var total2 = testPizza2.quantity();
-        var total3 = 40.50;
-        //wtf
+        var total3 = parseFloat(total2) + parseFloat(total);
 
-        expect(total3.toFixed(2)).to.equal(price);
+
+        expect(total3).to.equal(price);
     });
 
 });
