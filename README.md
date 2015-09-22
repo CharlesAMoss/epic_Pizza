@@ -2,7 +2,7 @@
 ## _website that allows a user to calculate a pizza order, 9/19/2015_
 ### By Charles Moss
 ## Description
-_User chooses quantities, toppings and size of their pizza order and is shown the final cost._
+_User chooses quantities, toppings and size of their pizza order and is shown the final cost. This project is a demonstration object oriented javascript principles._
 
 ## Demo
 
